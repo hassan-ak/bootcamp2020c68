@@ -16,6 +16,19 @@ On the CloudWatch console we have
 - If need to visulize data again and again need to create a dashboard
 - We can create alarms on our matics
 
+Important terms
+
+- Namespaces
+- Metrics
+- Units
+- Periods
+- Dimensions
+- Statistics
+- Aggregation
+- Alarms
+- Dashboards
+- SNS
+
 ## Sections
 
 ## Reading Material
