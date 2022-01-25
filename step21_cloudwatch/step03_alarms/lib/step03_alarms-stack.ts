@@ -1,5 +1,5 @@
 import * as cdk from '@aws-cdk/core';
-// import * as sqs from '@aws-cdk/aws-sqs';
+import * as lambda from '@aws-cdk/aws-lambda';
 
 export class Step03AlarmsStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
@@ -7,14 +7,15 @@ export class Step03AlarmsStack extends cdk.Stack {
 
     // The code that defines your stack goes here
 
-    // example resource
-    // const queue = new sqs.Queue(this, 'Step03AlarmsQueue', {
-    //   visibilityTimeout: cdk.Duration.seconds(300)
-    // });
+    // Lambda function on which we are placing cloudwatch alarms
+    const lambdaFn = new lambda.Function(this, 'LambdaHandler', {
+      runtime: lambda.Runtime.NODEJS_14_X,
+      code: lambda.Code.fromAsset('lambda'),
+      handler: 'lambda.handler',
+    });
   }
 }
 
-// import * as cdk from '@aws-cdk/core';
 // import cloudwatch = require('@aws-cdk/aws-cloudwatch');
 // import lambda = require('@aws-cdk/aws-lambda');
 // import * as cw_actions from '@aws-cdk/aws-cloudwatch-actions';
@@ -25,12 +26,6 @@ export class Step03AlarmsStack extends cdk.Stack {
 // export class Step03AlarmsStack extends cdk.Stack {
 //   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
 //     super(scope, id, props);
-
-//     const lambdaFn = new lambda.Function(this, 'LambdaHandler', {
-//       runtime: lambda.Runtime.NODEJS_12_X,
-//       code: lambda.Code.fromAsset('lambda'),
-//       handler: 'lambda.handler',
-//     });
 
 //     const errors = lambdaFn.metricErrors();
 //     const invocations = lambdaFn.metricInvocations();
