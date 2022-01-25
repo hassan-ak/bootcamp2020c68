@@ -34,6 +34,8 @@ Important terms
 - [Alarms](./step03_alarms)
 - [Dashboard](./step04_dashboard)
 - [CloudWatch Alarm](./step00_cloudwatch_alarm)
+- [Cloudwatch Alarm with SNS](./step01_cloudwatch_alarm_with_sns)
+- []()
 
 ## Reading Material
 
