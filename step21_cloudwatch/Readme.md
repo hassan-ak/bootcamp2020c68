@@ -33,6 +33,7 @@ Important terms
 
 - [Alarms](./step03_alarms)
 - [Dashboard](./step04_dashboard)
+- [CloudWatch Alarm](./step00_cloudwatch_alarm)
 
 ## Reading Material
 
