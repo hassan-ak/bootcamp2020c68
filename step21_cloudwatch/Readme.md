@@ -31,6 +31,8 @@ Important terms
 
 ## Sections
 
+- [Alarms](./step03_alarms)
+
 ## Reading Material
 
 - [AWS Cloudwatch Overview](https://aws.amazon.com/cloudwatch/)
