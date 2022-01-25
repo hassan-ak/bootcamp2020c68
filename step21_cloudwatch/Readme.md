@@ -32,6 +32,7 @@ Important terms
 ## Sections
 
 - [Alarms](./step03_alarms)
+- [Dashboard](./step04_dashboard)
 
 ## Reading Material
 
